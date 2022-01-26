@@ -12,7 +12,7 @@ public class LauncherFrame extends JFrame {
 
     public LauncherFrame() {
         this.setTitle("Hyronia Launcher | V1.0");
-        this.setSize(540, 800);
+        this.setSize(540, 799);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setUndecorated(true);

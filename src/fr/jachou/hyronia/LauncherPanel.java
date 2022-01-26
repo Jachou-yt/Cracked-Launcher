@@ -6,8 +6,10 @@ import fr.theshark34.swinger.colored.SColoredBar;
 import fr.theshark34.swinger.event.SwingerEvent;
 import fr.theshark34.swinger.event.SwingerEventListener;
 import fr.theshark34.swinger.textured.STexturedButton;
+import javafx.scene.layout.Background;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.io.IOException;
 
@@ -21,8 +23,8 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
     private JTextField passwordField = new JPasswordField();
 
     private STexturedButton playButton = new STexturedButton(Swinger.getResource("play.png"));
-    private STexturedButton quitButton = new STexturedButton(Swinger.getResource("quit1.png"));
-    private STexturedButton hideButton = new STexturedButton(Swinger.getResource("quit.png"));
+    private STexturedButton quitButton = new STexturedButton(Swinger.getResource("croix.png"));
+    private STexturedButton hideButton = new STexturedButton(Swinger.getResource("fermer.png"));
 
     private SColoredBar progressBar = new SColoredBar(Swinger.getTransparentWhite(100), Swinger.getTransparentWhite(175));
     private JLabel infoLabel = new JLabel("Cliquez sur Jouer !");
@@ -35,7 +37,7 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
         usernameField.setCaretColor(Color.WHITE);
         usernameField.setOpaque(false);
         usernameField.setBorder(null);
-        usernameField.setBounds(80, 430, 390, 40);
+        usernameField.setBounds(71, 369, 390, 40);
         this.add(usernameField);
 
         passwordField.setForeground(Color.WHITE);
@@ -43,14 +45,14 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
         passwordField.setCaretColor(Color.WHITE);
         passwordField.setOpaque(false);
         passwordField.setBorder(null);
-        passwordField.setBounds(80, 566, 390, 40);
+        passwordField.setBounds(74, 495, 390, 40);
         this.add(passwordField);
 
-        playButton.setBounds(134, 640, 262, 58);
+        playButton.setBounds(163, 610, 262, 58);
         playButton.addEventListener(this);
         this.add(playButton);
 
-        quitButton.setBounds(470, 0, 79, 62);
+        quitButton.setBounds(500, 5, 10, 10);
         quitButton.addEventListener(this);
         this.add(quitButton);
 
@@ -61,7 +63,7 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
         progressBar.setBounds(18, 350, 510, 20);
         this.add(progressBar);
 
-        infoLabel.setBounds(190, 320, 200, 25);
+        infoLabel.setBounds(170, 320, 400, 25);
         infoLabel.setFont(usernameField.getFont());
         infoLabel.setForeground(Color.WHITE);
         this.add(infoLabel);

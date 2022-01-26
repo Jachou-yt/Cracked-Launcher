@@ -41,9 +41,9 @@ public class Launcher {
             @Override
             public void run() {
                 while (!this.isInterrupted()) {
-                    if (BarAPI.getNumberOfFileToDownload() == 0) {
+                    /*if (BarAPI.getNumberOfFileToDownload() < 1) {
                         LauncherFrame.getInstance().getLauncherPanel().setInfoText("Vérification des fichiers");
-                    }
+                    }*/
 
                     val = (int) (BarAPI.getNumberOfTotalDownloadedBytes() / 1000);
                     max = (int) (BarAPI.getNumberOfTotalBytesToDownload() / 1000);

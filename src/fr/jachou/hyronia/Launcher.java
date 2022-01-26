@@ -1,7 +1,6 @@
 package fr.jachou.hyronia;
 
 
-
 import com.azuriom.azauth.AuthenticationException;
 import com.azuriom.azauth.AzAuthenticator;
 import fr.theshark34.openlauncherlib.launcher.*;
@@ -17,8 +16,8 @@ import java.io.IOException;
 
 public class Launcher {
 
-    public static final GameVersion HL_VERSION = new GameVersion("1.17.1", GameType.V1_8_HIGHER);
-    public static final GameInfos HL_INFOS = new GameInfos("hyronia", HL_VERSION, true, new GameTweak[] {GameTweak.OPTIFINE, GameTweak.SHADER});
+    public static final GameVersion HL_VERSION = new GameVersion("1.16.5", GameType.V1_8_HIGHER);
+    public static final GameInfos HL_INFOS = new GameInfos("hyronia", HL_VERSION, false, new GameTweak[] {});
     public static final File HL_DIR = HL_INFOS.getGameDir();
     public static final File HL_CRASHES_DIR = new File(HL_DIR, "crashes");
 
@@ -33,7 +32,7 @@ public class Launcher {
     }
 
     public static void update() throws Exception {
-        SUpdate su = new SUpdate("http://martayan.alwaysdata.net/", HL_DIR);
+        SUpdate su = new SUpdate("https://hyroniamc.evohebergweb.eu/S-updater/", HL_DIR);
         su.addApplication(new FileDeleter());
         updateThread = new Thread() {
             private int val;

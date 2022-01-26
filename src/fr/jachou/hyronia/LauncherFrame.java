@@ -1,7 +1,6 @@
 package fr.jachou.hyronia;
 
 import fr.theshark34.swinger.Swinger;
-import fr.theshark34.swinger.animation.Animator;
 import fr.theshark34.swinger.util.WindowMover;
 
 import javax.swing.*;

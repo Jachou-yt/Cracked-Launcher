@@ -1,6 +1,5 @@
 package fr.jachou.hyronia.bootstrap;
 
-import com.sun.jdi.event.ExceptionEvent;
 import fr.theshark34.openlauncherlib.bootstrap.Bootstrap;
 import fr.theshark34.openlauncherlib.bootstrap.LauncherClasspath;
 import fr.theshark34.openlauncherlib.bootstrap.LauncherInfos;
@@ -23,12 +22,12 @@ public class HyroniaBootstrap {
 
     private static final LauncherInfos HL_B_INFOS = new LauncherInfos("hyronia", "fr.jachou.hyronia.LauncherFrame");
     private static final File HL_B_DIR = GameDir.createGameDir("hyronia");
-    private static final LauncherClasspath Hl_B_P = new LauncherClasspath(new File(HL_B_DIR, "launcher.jar"), new File(HL_B_DIR, "Launcher/Libs/"));
+    private static final LauncherClasspath Hl_B_P = new LauncherClasspath(new File(HL_B_DIR, "Launcher/launcher.jar"), new File(HL_B_DIR, "Launcher/Libs/"));
 
     private static ErrorUtil errorUtil = new ErrorUtil(new File(HL_B_DIR, "Launcher/crashes/"));
 
     public static void main(String[] args) {
-        Swinger.setResourcePath("/fr/jachou/bootstrap/ressources");
+        Swinger.setResourcePath("/fr/jachou/hyronia/bootstrap/ressources");
         displaySplash();
         try {
             doUpdate();
